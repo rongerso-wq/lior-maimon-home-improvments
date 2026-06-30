@@ -199,16 +199,16 @@ function Stats() {
 
 // ─── Services ─────────────────────────────────────────────────────────────────
 const SERVICE_CARDS = [
-  { tag:'CARPENTRY',  icon:<Hammer size={26} color="#D97706" strokeWidth={1.8}/>,         bg:'bg-[#FFF7ED]', iconBg:'bg-amber-100',  title:'נגרות וארונות',                          desc:'הרכבה, תיקון וחידוש ארונות ומדפים',   accent:'#D97706' },
-  { tag:'POOLS',      icon:<Waves size={26} color="#D97706" strokeWidth={1.8}/>,           bg:'bg-[#FFF7ED]', iconBg:'bg-amber-100',  title:'תיקוני בריכות ביתיות',                   desc:'מדגמים, צינורות, ציוד וחיבורים',      accent:'#D97706' },
-  { tag:'SHUTTERS',   icon:<AlignJustify size={26} color="#7C3AED" strokeWidth={1.8}/>,   bg:'bg-[#EDE9FE]', iconBg:'bg-violet-100', title:'תיקון תריסים',                           desc:'כל סוגי התריסים, כולל חשמליים',       accent:'#7C3AED' },
-  { tag:'SCREENS',    icon:<Grid size={26} color="#D97706" strokeWidth={1.8}/>,            bg:'bg-[#FFF7ED]', iconBg:'bg-amber-100',  title:'החלפת רשתות יתושים',                     desc:'כל המידות, התקנה מהירה',              accent:'#D97706' },
-  { tag:'PLUMBING',   icon:<Droplets size={26} color="#D97706" strokeWidth={1.8}/>,        bg:'bg-[#FFF7ED]', iconBg:'bg-amber-100',  title:'החלפת ברזים',                             desc:'ברזי מטבח, אמבטיה ונקודות רטיבות',   accent:'#D97706' },
-  { tag:'FAN',        icon:<Wind size={26} color="#D97706" strokeWidth={1.8}/>,            bg:'bg-[#FFF7ED]', iconBg:'bg-amber-100',  title:'התקנת מאווררי תקרה',                     desc:'חיבור חשמלי, כל דגם',                 accent:'#D97706' },
-  { tag:'TV',         icon:<Tv size={26} color="#7C3AED" strokeWidth={1.8}/>,              bg:'bg-[#EDE9FE]', iconBg:'bg-violet-100', title:'תליית והתקנת טלוויזיות',                 desc:'קיר גבס או בטון, ניתוב כבלים',        accent:'#7C3AED' },
-  { tag:'DOORS',      icon:<Lock size={26} color="#7C3AED" strokeWidth={1.8}/>,            bg:'bg-[#EDE9FE]', iconBg:'bg-violet-100', title:'תיקוני דלתות',                           desc:'החלפת צירים, ידיות ומנגנוני נעילה',   accent:'#7C3AED' },
-  { tag:'SOLAR',      icon:<Sun size={26} color="#D97706" strokeWidth={1.8}/>,             bg:'bg-[#FFF7ED]', iconBg:'bg-amber-100',  title:'דודי שמש',                               desc:'החלפת גוף חימום, מפסקים חכמים',       accent:'#D97706' },
-  { tag:'LIGHTING',   icon:<Lightbulb size={26} color="#7C3AED" strokeWidth={1.8}/>,       bg:'bg-[#EDE9FE]', iconBg:'bg-violet-100', title:'התקנת גופי תאורה',                       desc:'ספוטים, נברשות, LED',                  accent:'#7C3AED' },
+  { tag:'CARPENTRY',  icon:<Hammer size={26} color="#D97706" strokeWidth={1.8}/>,      bg:'bg-[#FFF7ED]', iconBg:'bg-amber-100', title:'נגרות וארונות',           desc:'הרכבה, תיקון וחידוש ארונות ומדפים',  accent:'#D97706' },
+  { tag:'POOLS',      icon:<Waves size={26} color="#D97706" strokeWidth={1.8}/>,        bg:'bg-[#FFF7ED]', iconBg:'bg-amber-100', title:'תיקוני בריכות ביתיות',   desc:'מדגמים, צינורות, ציוד וחיבורים',     accent:'#D97706' },
+  { tag:'SHUTTERS',   icon:<AlignJustify size={26} color="#D97706" strokeWidth={1.8}/>, bg:'bg-[#FFF7ED]', iconBg:'bg-amber-100', title:'תיקון תריסים',           desc:'כל סוגי התריסים, כולל חשמליים',      accent:'#D97706' },
+  { tag:'SCREENS',    icon:<Grid size={26} color="#D97706" strokeWidth={1.8}/>,         bg:'bg-[#FFF7ED]', iconBg:'bg-amber-100', title:'החלפת רשתות יתושים',     desc:'כל המידות, התקנה מהירה',             accent:'#D97706' },
+  { tag:'PLUMBING',   icon:<Droplets size={26} color="#D97706" strokeWidth={1.8}/>,     bg:'bg-[#FFF7ED]', iconBg:'bg-amber-100', title:'החלפת ברזים',            desc:'ברזי מטבח, אמבטיה ונקודות רטיבות',  accent:'#D97706' },
+  { tag:'FAN',        icon:<Wind size={26} color="#D97706" strokeWidth={1.8}/>,         bg:'bg-[#FFF7ED]', iconBg:'bg-amber-100', title:'התקנת מאווררי תקרה',     desc:'חיבור חשמלי, כל דגם',                accent:'#D97706' },
+  { tag:'TV',         icon:<Tv size={26} color="#D97706" strokeWidth={1.8}/>,           bg:'bg-[#FFF7ED]', iconBg:'bg-amber-100', title:'תליית והתקנת טלוויזיות', desc:'קיר גבס או בטון, ניתוב כבלים',       accent:'#D97706' },
+  { tag:'DOORS',      icon:<Lock size={26} color="#D97706" strokeWidth={1.8}/>,         bg:'bg-[#FFF7ED]', iconBg:'bg-amber-100', title:'תיקוני דלתות',           desc:'החלפת צירים, ידיות ומנגנוני נעילה',  accent:'#D97706' },
+  { tag:'SOLAR',      icon:<Sun size={26} color="#D97706" strokeWidth={1.8}/>,          bg:'bg-[#FFF7ED]', iconBg:'bg-amber-100', title:'דודי שמש',               desc:'החלפת גוף חימום, מפסקים חכמים',      accent:'#D97706' },
+  { tag:'LIGHTING',   icon:<Lightbulb size={26} color="#D97706" strokeWidth={1.8}/>,    bg:'bg-[#FFF7ED]', iconBg:'bg-amber-100', title:'התקנת גופי תאורה',       desc:'ספוטים, נברשות, LED',                 accent:'#D97706' },
 ]
 
 function Services() {
