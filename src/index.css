@@ -24,12 +24,23 @@
 .ticker-track:hover { animation-play-state: paused; }
 
 .hero-bg-img {
-  object-position: 40% center;
-  transform: scale(1);
+  width: 100% !important;
+  height: auto !important;
+  top: 28% !important;
+  bottom: auto !important;
+  object-fit: unset !important;
+  transform: none;
+  filter: brightness(0.55) saturate(0.9) !important;
 }
 @media (min-width: 768px) {
   .hero-bg-img {
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    object-fit: cover !important;
     object-position: 60% center;
     transform: scale(1.05);
+    filter: brightness(0.38) saturate(0.9) !important;
   }
 }
