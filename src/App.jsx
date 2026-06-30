@@ -133,9 +133,9 @@ function Hero() {
       <img src="/gallery/Gemini_Generated_Image_gde41rgde41rgde4.png" alt=""
         fetchpriority="high" decoding="async"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-        style={{ filter:'brightness(0.18) saturate(0.8) blur(2px)', transform:'scale(1.05)', objectPosition:'60% center' }}/>
+        style={{ filter:'brightness(0.38) saturate(0.9)', transform:'scale(1.05)', objectPosition:'60% center' }}/>
       <div className="absolute inset-0 pointer-events-none"
-        style={{ background:'linear-gradient(180deg, rgba(13,10,26,0.6) 0%, rgba(30,16,40,0.5) 40%, rgba(13,10,26,0.85) 100%)' }}/>
+        style={{ background:'linear-gradient(180deg, rgba(13,10,26,0.55) 0%, rgba(30,16,40,0.4) 40%, rgba(13,10,26,0.80) 100%)' }}/>
       <div className="absolute inset-0 pointer-events-none"
         style={{ backgroundImage:'radial-gradient(circle, rgba(167,139,250,0.08) 1px, transparent 1px)', backgroundSize:'28px 28px' }}/>
 
