@@ -22,3 +22,14 @@
 }
 .ticker-track { animation: ticker 28s linear infinite; }
 .ticker-track:hover { animation-play-state: paused; }
+
+.hero-bg-img {
+  object-position: 40% center;
+  transform: scale(1);
+}
+@media (min-width: 768px) {
+  .hero-bg-img {
+    object-position: 60% center;
+    transform: scale(1.05);
+  }
+}
