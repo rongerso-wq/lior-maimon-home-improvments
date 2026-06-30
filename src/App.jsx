@@ -261,7 +261,7 @@ function HowItWorks() {
             </div>
           ))}
         </div>
-        <div className="mt-10 text-center">
+        <div className="mt-10 text-center hidden md:block">
           <a href={WA_HREF} target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 font-heebo font-black text-base px-8 py-4 rounded-full bg-[#7C3AED] text-white hover:bg-[#6D28D9] hover:scale-[1.03] transition-all duration-300">
             <MessageCircle size={18} strokeWidth={2.5}/> קבל הצעת מחיר
@@ -496,23 +496,32 @@ function Footer() {
 
 // ─── Floating WA button (mobile) ─────────────────────────────────────────────
 function FloatingWA() {
-  const [visible, setVisible] = useState(true)
+  const [visible, setVisible] = useState(false)
   useEffect(() => {
-    const contact = document.getElementById('contact')
-    if (!contact) return
-    const obs = new IntersectionObserver(
-      ([entry]) => setVisible(!entry.isIntersecting),
+    let heroVisible = true
+    let contactVisible = false
+    const update = () => setVisible(!heroVisible && !contactVisible)
+
+    const heroObs = new IntersectionObserver(
+      ([e]) => { heroVisible = e.isIntersecting; update() },
+      { threshold: 0.2 }
+    )
+    const contactObs = new IntersectionObserver(
+      ([e]) => { contactVisible = e.isIntersecting; update() },
       { threshold: 0.15 }
     )
-    obs.observe(contact)
-    return () => obs.disconnect()
+    const hero = document.getElementById('hero')
+    const contact = document.getElementById('contact')
+    if (hero) heroObs.observe(hero)
+    if (contact) contactObs.observe(contact)
+    return () => { heroObs.disconnect(); contactObs.disconnect() }
   }, [])
 
   return (
     <a href={WA_HREF} target="_blank" rel="noopener noreferrer"
-      className={`fixed left-1/2 -translate-x-1/2 z-50 md:hidden max-w-[90vw] inline-flex items-center gap-2.5 bg-[#7C3AED] text-white font-heebo font-black px-8 py-4 rounded-full text-lg shadow-2xl shadow-violet-900/60 transition-all duration-300 ${visible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-10 pointer-events-none'}`}
-      style={{ bottom: 'max(1.25rem, env(safe-area-inset-bottom))', transitionTimingFunction:'cubic-bezier(0.25,0.46,0.45,0.94)' }}>
-      <MessageCircle size={22} strokeWidth={2.5}/> וואטסאפ עכשיו
+      className={`fixed left-1/2 -translate-x-1/2 z-50 md:hidden inline-flex items-center gap-2 bg-[#7C3AED] text-white font-heebo font-black px-5 py-2.5 rounded-full text-sm shadow-xl shadow-violet-900/60 transition-all duration-300 ${visible ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-10 pointer-events-none'}`}
+      style={{ bottom: 'max(1rem, env(safe-area-inset-bottom))', transitionTimingFunction:'cubic-bezier(0.25,0.46,0.45,0.94)' }}>
+      <MessageCircle size={16} strokeWidth={2.5}/> וואטסאפ עכשיו
     </a>
   )
 }
