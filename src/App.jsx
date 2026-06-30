@@ -127,8 +127,8 @@ function Hero() {
 
   return (
     <section id="hero" ref={ref}
-      className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden text-center"
-      style={{ padding: 'clamp(3rem, 8vw, 10rem) clamp(1.25rem, 5vw, 6rem) clamp(5rem, 8vw, 10rem)' }}>
+      className="relative min-h-[75dvh] md:min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden text-center"
+      style={{ padding: 'clamp(1.5rem, 5vw, 10rem) clamp(1.25rem, 5vw, 6rem) clamp(2rem, 5vw, 10rem)' }}>
 
       <img src="/gallery/Gemini_Generated_Image_gde41rgde41rgde4.png" alt=""
         fetchpriority="high" decoding="async"
@@ -139,23 +139,23 @@ function Hero() {
       <div className="absolute inset-0 pointer-events-none"
         style={{ backgroundImage:'radial-gradient(circle, rgba(167,139,250,0.08) 1px, transparent 1px)', backgroundSize:'28px 28px' }}/>
 
-      <h1 className="hi font-heebo font-black leading-[1] mb-5"
+      <h1 className="hi font-heebo font-black leading-[1] mb-3 md:mb-5"
         style={{ fontSize:'clamp(2.4rem, 7vw, 7rem)' }}>
         <span className="text-white">ליאור </span>
         <span style={{ color:'#A78BFA' }}>הנדימן</span>
       </h1>
 
-      <p className="hi font-heebo font-black text-white mb-8 text-center leading-tight"
+      <p className="hi font-heebo font-black text-white mb-4 md:mb-8 text-center leading-tight"
         style={{ fontSize:'clamp(1.25rem, 3.2vw, 2.6rem)' }}>
         איש של פתרונות,{' '}
         <span style={{ color:'#A78BFA' }}>די ג'יי של פרטים קטנים</span>
       </p>
 
-      <div className="hi w-48 md:w-64 mb-8 opacity-25">
+      <div className="hi hidden md:block w-64 mb-8 opacity-25">
         <Waveform color="#A78BFA" opacity={1}/>
       </div>
 
-      <p className="hi font-heebo font-black text-white text-center leading-tight mb-12"
+      <p className="hi font-heebo font-black text-white text-center leading-tight mb-6 md:mb-12"
         style={{ fontSize:'clamp(1.1rem, 2.6vw, 2.2rem)' }}>
         בואו נעשה את זה כמו שצריך —{' '}
         <span style={{ color:'#F59E0B' }}>עד הפרט האחרון</span>
