@@ -148,19 +148,27 @@ function Hero() {
         style={{ backgroundImage:'radial-gradient(circle, rgba(167,139,250,0.08) 1px, transparent 1px)', backgroundSize:'28px 28px' }}/>
 
       {/* Logo mark above the brand name */}
-      <div className="hi flex justify-center mb-3 md:mb-5">
-        <img
-          src="/gallery/WhatsApp%20Image%202026-07-01%20at%2014.04.22.jpeg"
-          alt="בידיים טובות"
-          style={{
-            width: 'clamp(110px, 28vw, 180px)',
-            height: 'clamp(80px, 20vw, 130px)',
-            objectFit: 'cover',
-            objectPosition: '50% 42%',
-            filter: 'invert(1) brightness(1.25) contrast(1.1)',
-            mixBlendMode: 'screen'
-          }}
-        />
+      <div className="hi flex justify-center mb-4 md:mb-6">
+        <div style={{
+          background: 'rgba(255,255,255,0.96)',
+          borderRadius: 18,
+          padding: '10px 14px',
+          backdropFilter: 'blur(12px)',
+          boxShadow: '0 8px 32px rgba(0,0,0,0.35)'
+        }}>
+          <img
+            src="/gallery/WhatsApp%20Image%202026-07-01%20at%2014.04.22.jpeg"
+            alt="בידיים טובות"
+            style={{
+              width: 'clamp(100px, 24vw, 150px)',
+              height: 'clamp(68px, 16vw, 105px)',
+              objectFit: 'cover',
+              objectPosition: '50% 46%',
+              borderRadius: 8,
+              display: 'block'
+            }}
+          />
+        </div>
       </div>
 
       <h1 className="hi font-heebo font-black leading-[1] mb-3 md:mb-5"
