@@ -73,7 +73,15 @@ function Navbar() {
 
   return (
     <>
-      <nav className={`fixed top-14 md:top-20 left-1/2 -translate-x-1/2 z-50 max-w-[calc(100vw-1rem)] flex items-center gap-6 px-4 py-2.5 md:px-7 md:py-4 rounded-full bg-white/95 backdrop-blur-xl shadow-xl shadow-black/[0.08] border border-gray-100 transition-all duration-500 ${hidden ? '-translate-y-40 opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'}`}>
+      <nav className={`fixed top-14 md:top-20 left-1/2 -translate-x-1/2 z-50 max-w-[calc(100vw-1rem)] flex items-center gap-3 md:gap-6 px-4 py-2.5 md:px-7 md:py-4 rounded-full bg-white/95 backdrop-blur-xl shadow-xl shadow-black/[0.08] border border-gray-100 transition-all duration-500 ${hidden ? '-translate-y-40 opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'}`}>
+        {/* Brand mark */}
+        <a href="#hero" className="flex items-center gap-2 flex-shrink-0 no-underline">
+          <div style={{ width:36, height:36, overflow:'hidden', borderRadius:6, background:'#fff', flexShrink:0 }}>
+            <img src="/gallery/WhatsApp%20Image%202026-07-01%20at%2014.04.22.jpeg" alt="בידיים טובות"
+              style={{ width:'100%', height:'100%', objectFit:'contain', mixBlendMode:'multiply' }}/>
+          </div>
+          <span className="font-heebo font-black text-[#1E1028] text-sm leading-[1.1] hidden sm:block" style={{ fontSize:13 }}>בידיים<br/>טובות</span>
+        </a>
         <div className="hidden md:flex gap-7 items-center">
           {links.map(([l,h])=>(
             <a key={l} href={h} className="font-heebo font-bold text-base text-gray-500 hover:text-[#1E1028] hover:-translate-y-px transition-all">{l}</a>
@@ -141,8 +149,8 @@ function Hero() {
 
       <h1 className="hi font-heebo font-black leading-[1] mb-3 md:mb-5"
         style={{ fontSize:'clamp(2.4rem, 7vw, 7rem)' }}>
-        <span className="text-white">ליאור </span>
-        <span style={{ color:'#A78BFA' }}>הנדימן</span>
+        <span className="text-white">בידיים </span>
+        <span style={{ color:'#A78BFA' }}>טובות</span>
       </h1>
 
       <p className="hi font-heebo font-black text-white mb-4 md:mb-8 text-center leading-tight"
@@ -295,16 +303,26 @@ function About() {
             נעים להכיר
           </h2>
         </div>
-        <div className="max-w-3xl">
-          <p className="ab font-heebo text-white/75 leading-[1.9] text-base md:text-lg mb-6">
-            אני ליאור מיימון — איש של פתרונות, די ג'יי של פרטים קטנים. אני מביא איתי את המנטליות חסרת הפשרות של עולם ההייטק, יחד עם הדיוק, הקצב והיצירתיות של עולם המוזיקה.
-          </p>
-          <p className="ab font-heebo text-white/75 leading-[1.9] text-base md:text-lg mb-6">
-            אצלי אין דבר כזה "בערך" או "יהיה בסדר". כל התקנה, תיקון או בנייה מקבלים את אותה רמת פדנטיות, סבלנות ותשומת לב לפרטים.
-          </p>
-          <p className="ab font-heebo text-white/75 leading-[1.9] text-base md:text-lg mb-8">
-            מבחינתי, עבודה טובה היא לא רק כזו שעובדת — אלא כזו שנראית מושלמת גם מקרוב.
-          </p>
+        <div className="flex flex-col md:flex-row gap-10 md:gap-14 items-start">
+          {/* Headshot */}
+          <div className="ab flex-shrink-0 flex justify-center w-full md:w-auto">
+            <img src="/gallery/WhatsApp%20Image%202026-07-01%20at%2012.21.04.jpeg"
+              alt="ליאור מיימון"
+              className="w-44 h-44 md:w-56 md:h-56 rounded-2xl object-cover shadow-2xl"
+              style={{ border:'2px solid rgba(167,139,250,0.3)', objectPosition:'center top' }}/>
+          </div>
+          {/* Text */}
+          <div className="max-w-2xl">
+            <p className="ab font-heebo text-white/75 leading-[1.9] text-base md:text-lg mb-6">
+              אני ליאור מיימון — איש של פתרונות, די ג'יי של פרטים קטנים. אני מביא איתי את המנטליות חסרת הפשרות של עולם ההייטק, יחד עם הדיוק, הקצב והיצירתיות של עולם המוזיקה.
+            </p>
+            <p className="ab font-heebo text-white/75 leading-[1.9] text-base md:text-lg mb-6">
+              אצלי אין דבר כזה "בערך" או "יהיה בסדר". כל התקנה, תיקון או בנייה מקבלים את אותה רמת פדנטיות, סבלנות ותשומת לב לפרטים.
+            </p>
+            <p className="ab font-heebo text-white/75 leading-[1.9] text-base md:text-lg mb-8">
+              מבחינתי, עבודה טובה היא לא רק כזו שעובדת — אלא כזו שנראית מושלמת גם מקרוב.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -478,7 +496,7 @@ function Footer() {
   return (
     <footer className="bg-[#0A0012] py-8 px-5 border-t border-white/5">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-start">
-        <span className="font-heebo font-black text-white/60 text-sm">ליאור הנדימן</span>
+        <span className="font-heebo font-black text-white/60 text-sm">בידיים טובות</span>
         <span className="font-mono text-[12px] font-bold text-white/20 tracking-widest">עד הפרט האחרון · 2026©</span>
         <div className="flex flex-col items-center md:items-end gap-0.5">
           <span className="font-mono text-[10px] text-white/30 tracking-widest">Created by</span>
