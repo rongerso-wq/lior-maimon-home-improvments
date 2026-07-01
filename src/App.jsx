@@ -76,11 +76,11 @@ function Navbar() {
       <nav className={`fixed top-14 md:top-20 left-1/2 -translate-x-1/2 z-50 max-w-[calc(100vw-1rem)] flex items-center gap-3 md:gap-6 px-4 py-2.5 md:px-7 md:py-4 rounded-full bg-white/95 backdrop-blur-xl shadow-xl shadow-black/[0.08] border border-gray-100 transition-all duration-500 ${hidden ? '-translate-y-40 opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'}`}>
         {/* Brand mark */}
         <a href="#hero" className="flex items-center gap-2 flex-shrink-0 no-underline">
-          <div style={{ width:36, height:36, overflow:'hidden', borderRadius:6, background:'#fff', flexShrink:0 }}>
-            <img src="/gallery/WhatsApp%20Image%202026-07-01%20at%2014.04.22.jpeg" alt="בידיים טובות"
-              style={{ width:'100%', height:'100%', objectFit:'contain', mixBlendMode:'multiply' }}/>
+          <div style={{ width:40, height:40, overflow:'hidden', borderRadius:8, background:'#fff', flexShrink:0, border:'1.5px solid #e5e7eb' }}>
+            <img src="/gallery/WhatsApp%20Image%202026-07-01%20at%2014.04.22.jpeg" alt=""
+              style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'50% 45%', mixBlendMode:'multiply' }}/>
           </div>
-          <span className="font-heebo font-black text-[#1E1028] text-sm leading-[1.1] hidden sm:block" style={{ fontSize:13 }}>בידיים<br/>טובות</span>
+          <span className="font-heebo font-black text-[#1E1028] leading-[1.1] hidden sm:block" style={{ fontSize:13 }}>בידיים<br/>טובות</span>
         </a>
         <div className="hidden md:flex gap-7 items-center">
           {links.map(([l,h])=>(
@@ -146,6 +146,22 @@ function Hero() {
         style={{ background:'linear-gradient(180deg, rgba(13,10,26,0.55) 0%, rgba(30,16,40,0.4) 40%, rgba(13,10,26,0.80) 100%)' }}/>
       <div className="absolute inset-0 pointer-events-none"
         style={{ backgroundImage:'radial-gradient(circle, rgba(167,139,250,0.08) 1px, transparent 1px)', backgroundSize:'28px 28px' }}/>
+
+      {/* Logo mark above the brand name */}
+      <div className="hi flex justify-center mb-3 md:mb-5">
+        <img
+          src="/gallery/WhatsApp%20Image%202026-07-01%20at%2014.04.22.jpeg"
+          alt="בידיים טובות"
+          style={{
+            width: 'clamp(110px, 28vw, 180px)',
+            height: 'clamp(80px, 20vw, 130px)',
+            objectFit: 'cover',
+            objectPosition: '50% 42%',
+            filter: 'invert(1) brightness(1.25) contrast(1.1)',
+            mixBlendMode: 'screen'
+          }}
+        />
+      </div>
 
       <h1 className="hi font-heebo font-black leading-[1] mb-3 md:mb-5"
         style={{ fontSize:'clamp(2.4rem, 7vw, 7rem)' }}>
